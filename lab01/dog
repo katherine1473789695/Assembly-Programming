@@ -1,0 +1,38 @@
+
+heart.o:     file format elf32-i386
+
+
+Disassembly of section .text:
+
+00000000 <main>:
+   0:	ba 27 00 00 00       	mov    $0x27,%edx
+   5:	b9 00 00 00 00       	mov    $0x0,%ecx
+   a:	bb 01 00 00 00       	mov    $0x1,%ebx
+   f:	b8 04 00 00 00       	mov    $0x4,%eax
+  14:	cd 80                	int    $0x80
+  16:	bb 00 00 00 00       	mov    $0x0,%ebx
+  1b:	b8 01 00 00 00       	mov    $0x1,%eax
+  20:	cd 80                	int    $0x80
+
+Disassembly of section .data:
+
+00000000 <msg>:
+   0:	20 2a                	and    %ch,(%edx)
+   2:	20 20                	and    %ah,(%eax)
+   4:	20 2a                	and    %ch,(%edx)
+   6:	0a 2a                	or     (%edx),%ch
+   8:	2a 2a                	sub    (%edx),%ch
+   a:	2a 2a                	sub    (%edx),%ch
+   c:	2a 2a                	sub    (%edx),%ch
+   e:	0a 20                	or     (%eax),%ah
+  10:	2a 2a                	sub    (%edx),%ch
+  12:	2a 2a                	sub    (%edx),%ch
+  14:	2a 0a                	sub    (%edx),%cl
+  16:	20 20                	and    %ah,(%eax)
+  18:	20 2a                	and    %ch,(%edx)
+  1a:	0a 31                	or     (%ecx),%dh
+  1c:	38 31                	cmp    %dh,(%ecx)
+  1e:	38 34 30             	cmp    %dh,(%eax,%esi,1)
+  21:	33 32                	xor    (%edx),%esi
+  23:	36 0a 0a             	or     %ss:(%edx),%cl
+	...
